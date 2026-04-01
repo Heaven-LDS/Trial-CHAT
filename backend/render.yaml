@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: trial-chat-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_BASE_URL
+        value: https://models.inference.ai.azure.com
+      - key: OPENAI_MODEL
+        value: DeepSeek-V3-0324
