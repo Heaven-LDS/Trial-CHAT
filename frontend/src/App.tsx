@@ -129,6 +129,10 @@ function App() {
           Your request is being processed. Due to API rate limits, it may take up to 60 seconds.
         </div>
       )}
+
+      <div style={{ marginTop: 24, textAlign: "center", color: "#999", fontSize: "12px" }}>
+        © Heaven LIU
+      </div>
     </div>
   );
 }
